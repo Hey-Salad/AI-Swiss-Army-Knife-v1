@@ -42,13 +42,14 @@ mission-critical applications.
 ## 🔩  Step 2: Set Up the Instance
 1. Connect to the GCP instance using SSH.
 2. Update the system packages:
-     \`\`\`bash
-sudo apt update && sudo apt upgrade -y
-   \`\`\`
+     ```
+     sudo apt update && sudo apt upgrade -y
+
+   ```
 3. Install the NVIDIA driver:
-  \`\`\`bash
-sudo /opt/deeplearning/install-driver.sh
-   \`\`\`
+   ```
+   sudo /opt/deeplearning/install-driver.sh
+   ```
 4. Install Docker and Docker Compose:
    \`\`\`bash
      sudo apt install docker.io docker-compose -y
@@ -83,16 +84,16 @@ WEBUI_SECRET_KEY=your_secret_key
     docker-compose up -d
      \`\`\`
 
- 🔒 ## Step 4: Configure SSL/TLS (Optional)
+ ##🔒 Step 4: Configure SSL/TLS (Optional)
 1. Install Nginx and Certbot:
-     \`\`\`bash
+     ```bash
      sudo apt install nginx certbot python3-certbot-nginx -y
-     \`\`\`
+     ```
 2. Configure Nginx as a reverse proxy for Open WebUI.
 3. Obtain SSL certificates using Certbot:
-     \`\`\`bash
+     ```bash
      sudo certbot --nginx -d your_domain.com
-     \`\`\`
+     ```
  
   ## 🌐  Step 5: Set Up DNS and Firewall Rules
 1. Configure your domain's DNS settings to point to the GCP instance's public IP address.
