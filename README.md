@@ -51,38 +51,37 @@ mission-critical applications.
    sudo /opt/deeplearning/install-driver.sh
    ```
 4. Install Docker and Docker Compose:
-   \`\`\`bash
+   ```bash
      sudo apt install docker.io docker-compose -y
-   \`\`\`
+   ```
 5. Add your user to the docker group:
-    \`\`\`bash 
-   sudo usermod -aG docker $USER
-  \`\`\`
+```
+  sudo usermod -aG docker $USER
+```
    Log out and log back in for the changes to take effect.
  
 ## 🐳  Step 3: Deploy Open WebUI
   1. Clone the Open WebUI repository:
-  \`\`\`bash
+`bash
   git clone https://github.com/open-webui/open-webui.git
   cd open-webui
-  \`\`\`
+`
 2. Create a Docker volume for persistent storage:
-  \`\`\`bash
+   ```bash
    docker volume create open-webui  
-   \`\`\`
-3. Create a \`.env\` file in the project root and configure the necessary environment variables:
-  \`\`\`bash
-
-## Example .env file
-OLLAMA_API_BASE_URL=http://localhost:11434
-DATABASE_URL=sqlite:////app/backend/data/webui.db
-WEBUI_AUTH=true
-WEBUI_SECRET_KEY=your_secret_key
-     \`\`\`
+   ```
+3. Create a `.env\` file in the project root and configure the necessary environment variables:
+   ```bash
+   ## Example .env file
+   OLLAMA_API_BASE_URL=http://localhost:11434
+   DATABASE_URL=sqlite:////app/backend/data/webui.db
+   WEBUI_AUTH=true
+   WEBUI_SECRET_KEY=your_secret_key
+     ```
 4. Build and start the Open WebUI container:
-    \`\`\`bash
+    ```bash
     docker-compose up -d
-     \`\`\`
+     ```
 
  ##🔒 Step 4: Configure SSL/TLS (Optional)
 1. Install Nginx and Certbot:
@@ -104,11 +103,11 @@ WEBUI_SECRET_KEY=your_secret_key
 2. Follow the on-screen instructions to create an admin account and log in.
 3. Set up and configure the DeepSeek model according to the Open WebUI documentation.
 
-🤔 ## Troubleshooting
+## 🤔 Troubleshooting
 - If you encounter issues with the Open WebUI interface, check the Docker container logs:
-    \`\`\`bash
+    ```
     docker-compose logs -f
-    \`\`\`
+    ```
  - Verify that the firewall rules are correctly configured and the instance is reachable.
  - Ensure that the SSL/TLS certificates are properly installed and configured.
  - Double-check the environment variables in the \`.env\` file.
