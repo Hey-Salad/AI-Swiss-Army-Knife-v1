@@ -11,6 +11,8 @@ This README provides a detailed walkthrough on setting up an enterprise-grade
 implementation of DeepSeek, a powerful AI model, using Open WebUI on Google Cloud 
 Platform (GCP). The setup ensures high availability, scalability, and security for
 mission-critical applications.
+
+Test -> https://chat.heysalad.app/
  
 ## 📋  Table of Contents
 - [Prerequisites](#prerequisites)
