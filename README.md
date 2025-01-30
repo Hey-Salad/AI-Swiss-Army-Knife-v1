@@ -83,7 +83,7 @@ mission-critical applications.
     docker-compose up -d
      ```
 
- ##🔒 Step 4: Configure SSL/TLS (Optional)
+ ## 🔒 Step 4: Configure SSL/TLS (Optional)
 1. Install Nginx and Certbot:
      ```bash
      sudo apt install nginx certbot python3-certbot-nginx -y
